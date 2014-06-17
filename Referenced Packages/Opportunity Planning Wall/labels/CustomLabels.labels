@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>SFDCOpportunityWall_Threshold_High</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SFDCOpportunityWall Threshold High</shortDescription>
+        <value>150000</value>
+    </labels>
+    <labels>
+        <fullName>SFDCOpportunityWall_Threshold_Low</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SFDCOpportunityWall Threshold Low</shortDescription>
+        <value>25000</value>
+    </labels>
+    <labels>
+        <fullName>SFDCOpportunityWall_Threshold_Medium</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SFDCOpportunityWall Threshold Medium</shortDescription>
+        <value>75000</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_AllowFormulaFields</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_AllowFormulaFields</shortDescription>
+        <value>false</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_EmptyResultInfo</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_EmptyResultInfo</shortDescription>
+        <value>No {0} found for the current filter criteria.</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_FilterViewLabel</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_FilterViewLabel</shortDescription>
+        <value>Filter View:</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_GroupByLabel</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_GroupByLabel</shortDescription>
+        <value>Group by:</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_OfLabel</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_OfLabel</shortDescription>
+        <value>of</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_PageLabel</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_PageLabel</shortDescription>
+        <value>Page</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_RefreshButton</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_RefreshButton</shortDescription>
+        <value>Refresh</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_ResultInfo</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_ResultInfo</shortDescription>
+        <value>{0} {1} - {2} of total {3}</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_SaveButton</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_SaveButton</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_SaveDisabledTip</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_SaveDisabledTip</shortDescription>
+        <value>Modifications are not allowed for the current group field.</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_ShowEmptyColumnsLabel</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_ShowEmptyColumnsLabel</shortDescription>
+        <value>Show empty columns</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_ShowEmptyTip</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_ShowEmptyTip</shortDescription>
+        <value>Only applicable when grouping by Relationship, Picklist or Checkbox fields.</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_SortAscendingTip</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_SortAscendingTip</shortDescription>
+        <value>Sort ascending</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_SortByLabel</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_SortByLabel</shortDescription>
+        <value>Sort by:</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_WindowTitle</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_WindowTitle</shortDescription>
+        <value>{0} grouped by &quot;{1}&quot; - VirtualWall</value>
+    </labels>
+    <labels>
+        <fullName>VirtualWall_ZoomHint</fullName>
+        <categories>VirtualWall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VirtualWall_ZoomHint</shortDescription>
+        <value>Press CTRL- / CTRL+
+to zoom in and out.</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,14 @@
+<apex:page controller="LeadFetch">
+   <apex:form >   
+       <apex:pageBlock id="pb">
+           <apex:pageBlockTable value="{!leadListdisp}" var="l" id="pbt"> 
+               <apex:column value="{!l.Name}"/>
+               <apex:column value="{!l.Company}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+       <center>           
+           <apex:actionSupport action="{!loadMore}" reRender="pbt" event="onmouseover" status="status"/>
+           <apex:actionStatus startText=" (Loading...)" stopText=" (done)" id="status"/>
+       </center>    
+   </apex:form>
+</apex:page>

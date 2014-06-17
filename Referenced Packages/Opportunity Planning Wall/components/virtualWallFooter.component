@@ -1,0 +1,32 @@
+<apex:component >
+	<apex:attribute name="availablePageNumbers" description="." type="List" required="true"/>
+	<apex:attribute name="currentPageNumber" description="." type="List" required="true"/>
+	<apex:attribute name="totalPages" description="." type="Integer" required="true"/>
+	<apex:attribute name="resultInfo" description="." type="String" required="true"/>
+	<apex:attribute name="doNext" description="." type="ApexPages.Action" required="true" />
+	<apex:attribute name="doPrevious" description="." type="ApexPages.Action" required="true"/>
+	<apex:attribute name="doChangePage" description="." type="ApexPages.Action" required="true"/> 
+	<apex:attribute name="paginator" description="." type="ApexPages.StandardSetController" required="true"/>
+	
+	<apex:panelGrid columns="2" id="wall-footer" width="100%">   
+		<apex:panelGroup > 
+	   		<apex:outputLabel value="{!$Label.VirtualWall_PageLabel} " />
+			<apex:selectList value="{!currentPageNumber}" size="1" >
+				<apex:actionSupport event="onchange" action="{!doChangePage}" onSubmit="j$.blockUI({ message: null });" onBeforeDOMUpdate="j$.unblockUI();" />
+				<apex:selectOptions value="{!availablePageNumbers}"/>
+			</apex:selectList>
+			<apex:outputLabel value=" {!$Label.VirtualWall_OfLabel} " /> 
+			<apex:outputText value="{0, number, integer}">
+				<apex:param value="{!totalPages}" />
+			</apex:outputText>
+		</apex:panelGroup> 	
+		
+		<apex:panelGroup > 
+			<apex:commandButton action="{!doPrevious}" rendered="{!paginator.hasPrevious}" value="  <<  " /> 
+			<span class="separator"/>
+			<apex:outputLabel value="{!resultInfo}" />
+			<span class="separator"/>
+			<apex:commandButton action="{!doNext}" rendered="{!paginator.hasNext}" value="  >>  " /> 
+		</apex:panelGroup>		
+	</apex:panelGrid>        
+</apex:component>

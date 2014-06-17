@@ -1,0 +1,5 @@
+<apex:page controller="CallManagementController" showheader="false"
+  contentType="text/xml" action="{!kookooResponse}"
+  >{! '<?xml version=\"1.0\" encoding=\"UTF-8\"?>' }
+ {!response}
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page standardController="Task" action="{!Save}"  >
+<apex:form >
+<apex:pageBlock >
+
+   <!-- <br>  task id : {!accId}</br>-->
+ 
+
+    
+ 
+    
+</apex:pageBlock>     
+</apex:form>
+</apex:page>

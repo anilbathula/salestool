@@ -1,0 +1,20 @@
+<apex:page controller="ViewAllActivityController">
+    <apex:pageBlock title="Activity Details">
+        <apex:outputText styleClass="leftLabel"><b>&nbsp;Account:</b></apex:outputText>
+        <apex:outputLink value="/{!Summary.AccountId}" styleClass="leftValue">&nbsp;{!Summary.Account}</apex:outputLink><br />
+        <apex:outputPanel rendered="{!ShowContactDetail}">
+            <apex:outputText styleClass="leftLabel"><b>&nbsp;&nbsp;Contact:&nbsp;</b></apex:outputText>
+            <apex:outputLink value="/{!Summary.ContactId}" styleClass="leftValue">{!Summary.FirstName} {!Summary.LastName}</apex:outputLink><br />
+        </apex:outputPanel>
+    </apex:pageBlock>  
+    <apex:pageBlock > 
+        <apex:outputText rendered="{!IF(ActivityHistories.size = 0, true, false)}">No records to display</apex:outputText>                
+        <apex:pageBlockTable value="{!ActivityHistories}" var="ah" rows="{!ActivityHistories.size}" rendered="{!IF(ActivityHistories.size > 0, true, false)}">                                                  
+            <apex:column value="{!ah.Subject}" width="130px" style="vertical-align: top;"/>
+            <apex:column value="{!ah.ActivityDate}" width="110px" style="vertical-align: top;"/>                       
+            <apex:column value="{!ah.Owner.Name}" width="130px" headerValue="Assigned To" style="vertical-align: top;"/>                       
+            <apex:column value="{!ah.Who.Name}" width="130px" headerValue="Contact" style="vertical-align: top;"/>
+            <apex:column value="{!ah.Description}" style="vertical-align: top;"/>
+        </apex:pageBlockTable>                    
+    </apex:pageBlock>
+</apex:page>

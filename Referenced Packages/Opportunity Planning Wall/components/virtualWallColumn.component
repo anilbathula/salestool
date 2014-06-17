@@ -1,0 +1,49 @@
+<!-- 
+/* ============================================================
+	Copyright (c) 2011 LogicLine EDV-SystemService GmbH
+	All rights reserved.
+	
+	Redistribution in source and binary forms, with or without
+	modification, are not permitted.
+	
+	THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+	IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+	OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+	IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, 
+	INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+	NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+	DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+	THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+	THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * ============================================================ 
+ */
+-->
+<apex:component >
+	<apex:attribute name="column" description="." type="loli_oppwall.ValueGroupColumn" required="true"/>
+	<apex:attribute name="doRefresh" description="." type="ApexPages.Action" required="true"/> 
+	
+   	<div class="column onecolumn">
+		<div class="column-header">
+		    <h2>
+		    	<apex:outputText value="{!column.label}" rendered="{!column.drillDownId == null}" />
+		    	<apex:commandLink action="{!doRefresh}" value="{!column.label}" rendered="{!column.drillDownId != null}"> 
+		    		<apex:param name="parentId" value="{!column.drillDownId}" assignTo="{!parentId}" />
+		    	</apex:commandLink>&nbsp;
+		    </h2> 
+			<apex:inputHidden id="columnId" value="{!column.id}"/> 
+		</div> 
+	                  
+		<ul class="column-body"> 
+		    <apex:repeat value="{!column.cards}" var="card">
+		        <li class="card handle {!card.cssClasses} touchable" id="{!card.item['Id']}"> 
+		            <apex:componentBody />
+		            
+		            <apex:inputHidden id="movedToColumn" value="{!card.columnId}"/>
+		            <apex:inputHidden id="hasChanged" value="{!card.hasChanged}"/>
+		            <apex:inputHidden id="hasMoved" value="{!card.hasMoved}"/>
+		        </li> 
+		    </apex:repeat>
+		</ul>                                              
+	</div>
+</apex:component>

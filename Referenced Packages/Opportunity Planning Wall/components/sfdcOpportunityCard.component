@@ -1,0 +1,57 @@
+<!-- 
+/* ============================================================
+	Copyright (c) 2011 LogicLine EDV-SystemService GmbH
+	All rights reserved.
+	
+	Redistribution in source and binary forms, with or without
+	modification, are not permitted.
+	
+	THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+	IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+	OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+	IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, 
+	INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+	NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+	DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+	THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+	THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * ============================================================ 
+ */
+  -->
+ <apex:component >
+    <apex:attribute name="card" description="Defines the view for each card on the virtual wall." type="loli_oppwall.VirtualCard" required="true"/>
+    
+    <apex:stylesheet value="{!$Resource.loli_oppwall__sfdcOpportunityCard_css}" />
+    <apex:includeScript value="{!$Resource.loli_oppwall__sfdcOpportunityCard_js}" /> 
+    
+    <div class="innerbox">
+        <div class="full">
+        	 <a href="../../{!card.item.id}/e?retURL={!card.item.id}" target="_blank" rel="external"><apex:outputText value="{!card.item['Name']}" /> </a>
+        </div>
+        <div class="left">
+        	Account<br/>
+            <b><apex:outputText value="{!card.item['account.name']}" /></b>
+        </div>
+        <div class="right"> 
+            Stage<br/>
+            <b><apex:outputText value="{!card.item['StageName']}" /></b>
+        </div>
+        <div class="left">
+            Owner<br/>
+            <b><apex:outputText value="{!card.item['owner.name']}" /></b>
+        </div>
+        <div class="right">
+        	Close Date<br/>
+            <b><apex:outputField value="{!card.item['closedate']}" /></b>
+        </div>
+    </div>
+    <div class="card-footer">
+    	<div>
+    		<apex:outputText value="{!card.item['probability']}" /> %
+    	</div>
+    	<div>
+    		<apex:outputField value="{!card.item['amount']}" />
+    	</div>
+    </div>
+</apex:component>

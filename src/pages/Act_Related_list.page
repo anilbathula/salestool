@@ -1,0 +1,25 @@
+<apex:page standardController="contact" recordSetVar="contacts" extensions="listofClosedActivities"   >
+<apex:form >
+<apex:pageBlock >
+
+<apex:pageBlockTable value="{!Activities}"  var="s">
+<apex:column value="{!s.id}"  />
+<apex:column value="{!s.Subject}"  />
+
+</apex:pageBlockTable>
+
+<apex:pageBlockTable value="{!Events}"  var="s">
+<apex:column value="{!s.id}"  />
+<apex:column value="{!s.Subject}"  />
+<apex:column value="{!s.ActivityDate}"  />
+
+
+
+</apex:pageBlockTable>
+
+
+   
+
+</apex:pageBlock>     
+</apex:form>
+</apex:page>

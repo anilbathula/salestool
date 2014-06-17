@@ -1,0 +1,13 @@
+<apex:page controller="DescribeDataCategoryGroupStructures" tabstyle="Account">
+    <apex:form >
+        <apex:pageBlock mode="edit">
+            <apex:pageMessages />
+            <apex:pageBlockSection >                
+               <apex:outputField value="describeCategoryStructureResult"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+             <!--   <apex:commandButton value="Save" action="{!save}"/>-->
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

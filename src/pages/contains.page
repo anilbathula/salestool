@@ -1,0 +1,9 @@
+<apex:page standardController="Account" recordSetVar="acct">
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!acct}" var="a">
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.billingstreet}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+  
+</apex:page>

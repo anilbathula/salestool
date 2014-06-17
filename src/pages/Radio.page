@@ -1,0 +1,24 @@
+<apex:page controller="RadioButton">
+<apex:form >
+<apex:selectRadio value="{!Yes}" >
+            <apex:selectOptions value="{!items}"/>
+            </apex:selectRadio><p/>
+       <apex:actionSupport event="onclick" reRender="added" status="fs"/>
+  </apex:form>    
+  
+ <apex:outputPanel id="added">
+ <apex:pageblockSection title="states" rendered="{Yes=true}">
+      <apex:outputText >
+      test 
+      </apex:outputText> 
+      </apex:pageblockSection>
+      </apex:outputPanel>
+         
+   
+           
+         
+           
+           
+
+ 
+</apex:page>

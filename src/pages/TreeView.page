@@ -1,0 +1,37 @@
+<apex:page controller="jQuerycls">
+<html>
+<head>
+    <apex:includeScript value="{!URLFOR($Resource.jQuery_min)}"  />
+    <apex:includeScript value="{!URLFOR($Resource.jQuery_ui)}"  />
+    <apex:stylesheet value="{!URLFOR($Resource.jQuery_css)}"  />
+  <link rel="stylesheet" href="http://1.cdn.blog.com/wp-admin/{!$Resource.jQuery_min}/jzaefferer-jquery-treeview-076d477/jquery.treeview.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="http://1.cdn.blog.com/wp-admin/{!$Resource.jQuery_min}/jzaefferer-jquery-treeview-076d477/jquery.treeview.js"></script>
+  <style type="text/css">
+  #browser {
+    font-family: Verdana, helvetica, arial, sans-serif;
+    font-size: 100%;
+  }
+  </style>
+  <script>
+  $(document).ready(function(){
+    $("#browser").treeview();
+  });
+  </script>
+
+</head>
+<body>
+
+  <ul id="browser" class="filetree">
+    <apex:repeat value="{!lst}" var="acc">
+    <li class="closed"><span class="folder">{!acc.name}</span>
+        <ul>
+            <apex:repeat value="{!acc.contacts}" var="c">
+            <li><span class="file">{!c.name}</span></li>
+            </apex:repeat>
+        </ul>
+    </li>
+    </apex:repeat>
+   </ul>
+</body>
+</html>
+</apex:page>
