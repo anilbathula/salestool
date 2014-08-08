@@ -9,6 +9,7 @@ Public class Act{
         accid=Apexpages.currentpage().getparameters().get('Id');
         system.debug(accid);
         t=[select id,Whatid from Task where whatid=:accid];
+        system.debug('--->'+t);
              
       
     }
